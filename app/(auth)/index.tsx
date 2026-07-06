@@ -21,7 +21,7 @@ export default function WelcomeScreen() {
       </View>
 
       <View style={styles.body}>
-        <Text style={styles.heart}>❤️</Text>
+        <Text style={styles.heart}>🩷</Text>
         <Text style={styles.title}>HealthTrack Enterprise</Text>
         <Text style={styles.subtitle}>
           Real-time vitals checking metrics and structural logging framework for regional ward

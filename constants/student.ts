@@ -1,7 +1,7 @@
 export const STUDENT = {
   fullName: 'Felman Eleponga',
   course: 'BSIT BA',
-  portal: 'HealthNode Portal',
+  portal: 'Health Node Portal',
   roleTag: 'Developer',
   university: 'Batangas State University',
   srCode: '23-74644',

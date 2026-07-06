@@ -51,10 +51,11 @@ const INITIAL_LOGS: MedicalLog[] = [
     name: 'Dr. Oliver Hernandez',
     role: 'Automated Pathology Report',
     time: '2h ago',
-    body: 'Lab Results Available: CBC and Electrolyte panel completed for Patient ID: #9941. All levels within safe operational limits.',
+    body: 'Lab Results Available: CBC and Electrolyte panel completed for Patient ID: #9941.',
     status: 'nominal',
     avatar: { type: 'icon', value: 'microscope' },
   },
+
   {
     id: '4',
     name: 'Dr. Celeste Maranan',
@@ -64,6 +65,7 @@ const INITIAL_LOGS: MedicalLog[] = [
     status: 'nominal',
     avatar: { type: 'initials', value: 'CE' },
   },
+
   {
     id: '5',
     name: 'Dr. Harrol Evangelista',
@@ -73,6 +75,7 @@ const INITIAL_LOGS: MedicalLog[] = [
     status: 'critical',
     avatar: { type: 'icon', value: 'robot' },
   },
+  
   {
     id: '6',
     name: 'Dr. Doms Javier',

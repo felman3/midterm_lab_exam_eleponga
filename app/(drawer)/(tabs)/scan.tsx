@@ -1,33 +1,14 @@
-import { CameraView, useCameraPermissions } from 'expo-camera';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function ScanScreen() {
-  const [permission, requestPermission] = useCameraPermissions();
-
-  if (!permission) {
-    return <View style={styles.container} />;
-  }
-
-  if (!permission.granted) {
-    return (
-      <View style={[styles.container, styles.center]}>
-        <Text style={styles.permissionText}>
-          We need your permission to show the camera scanner node.
-        </Text>
-        <TouchableOpacity style={styles.grantButton} activeOpacity={0.85} onPress={requestPermission}>
-          <Text style={styles.grantButtonText}>GRANT CAMERA PERMISSION</Text>
-        </TouchableOpacity>
-      </View>
-    );
-  }
-
   return (
-    <View style={styles.container}>
-      <CameraView style={StyleSheet.absoluteFill} facing="back" />
-      <View style={styles.overlay}>
-        <View style={styles.scanFrame} />
-        <Text style={styles.overlayText}>Align the QR code within the frame</Text>
+    <View style={[styles.container, styles.center]}>
+      <View style={styles.scanFrame}>
+        <MaterialCommunityIcons name="qrcode-scan" size={72} color="rgba(255, 255, 255, 0.35)" />
       </View>
+      <Text style={styles.title}>SCANNER NODE OFFLINE</Text>
+      <Text style={styles.subtitle}>QR scanning is disabled on this device.</Text>
     </View>
   );
 }
@@ -41,31 +22,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 32,
-  },
-  permissionText: {
-    color: '#FFFFFF',
-    fontSize: 13,
-    fontWeight: '700',
-    textAlign: 'center',
-    marginBottom: 18,
-  },
-  grantButton: {
-    backgroundColor: '#2563EB',
-    borderRadius: 6,
-    paddingVertical: 12,
-    paddingHorizontal: 20,
-  },
-  grantButtonText: {
-    color: '#FFFFFF',
-    fontSize: 12,
-    fontWeight: '800',
-    letterSpacing: 0.5,
-  },
-  overlay: {
-    ...StyleSheet.absoluteFillObject,
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 22,
+    gap: 12,
   },
   scanFrame: {
     width: 240,
@@ -73,11 +30,21 @@ const styles = StyleSheet.create({
     borderRadius: 18,
     borderWidth: 3,
     borderStyle: 'dashed',
-    borderColor: 'rgba(255, 255, 255, 0.9)',
+    borderColor: 'rgba(255, 255, 255, 0.35)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 10,
   },
-  overlayText: {
-    color: 'rgba(255, 255, 255, 0.85)',
+  title: {
+    color: '#FFFFFF',
+    fontSize: 14,
+    fontWeight: '800',
+    letterSpacing: 1.2,
+  },
+  subtitle: {
+    color: 'rgba(255, 255, 255, 0.6)',
     fontSize: 13,
     fontWeight: '600',
+    textAlign: 'center',
   },
 });
