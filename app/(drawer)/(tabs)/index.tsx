@@ -142,7 +142,6 @@ export default function FeedScreen() {
       contentContainerStyle={styles.content}>
       <Text style={[styles.sectionLabel, { color: colors.sectionLabel }]}>MEDICAL UPDATE</Text>
 
-      {/* Composer card */}
       <View style={[styles.card, { backgroundColor: colors.card, borderColor: colors.cardBorder }]}>
         <View style={styles.composerRow}>
           <View style={[styles.avatar, { backgroundColor: avatarBg }]}>
@@ -166,7 +165,6 @@ export default function FeedScreen() {
         </TouchableOpacity>
       </View>
 
-      {/* Feed cards */}
       {logs.map((log) => (
         <TouchableOpacity
           key={log.id}

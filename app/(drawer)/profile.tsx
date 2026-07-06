@@ -13,7 +13,6 @@ export default function ProfileScreen() {
     <ScrollView
       style={{ backgroundColor: colors.background }}
       contentContainerStyle={styles.content}>
-      {/* Cover banner */}
       <View style={styles.cover}>
         <MaterialCommunityIcons
           name="pulse"
@@ -23,7 +22,6 @@ export default function ProfileScreen() {
         />
       </View>
 
-      {/* Avatar overlapping the cover */}
       <View style={styles.avatarWrap}>
         <View style={[styles.avatar, { borderColor: colors.card }]}>
           <Ionicons name="person" size={54} color="#2F80ED" />

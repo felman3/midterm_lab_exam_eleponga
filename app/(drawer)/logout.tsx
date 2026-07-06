@@ -5,8 +5,6 @@ import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
 import { useAuth } from '@/contexts/auth-context';
 import { useAppTheme } from '@/contexts/theme-context';
 
-// Logout trigger screen: landing here drops the auth state and kicks the
-// user back to the launch screen, replacing the history stack.
 export default function LogoutScreen() {
   const router = useRouter();
   const { logout } = useAuth();

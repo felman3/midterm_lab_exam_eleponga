@@ -11,8 +11,6 @@ export default function WelcomeScreen() {
 
   const handleGetStarted = () => {
     login();
-    // replace() erases the launch screen from history so a back swipe
-    // cannot return the user to this screen.
     router.replace('/(drawer)/(tabs)');
   };
 

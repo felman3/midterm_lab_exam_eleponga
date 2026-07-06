@@ -59,7 +59,6 @@ function ClinicalDrawerContent(props: DrawerContentComponentProps) {
         </View>
       </DrawerContentScrollView>
 
-      {/* Logout is pinned to the absolute base of the sidebar. */}
       <View
         style={[
           styles.logoutBlock,
@@ -88,7 +87,6 @@ export default function DrawerLayout() {
       }}>
       <Drawer.Screen name="(tabs)" options={{ headerShown: false, title: 'Main Dashboard' }} />
       <Drawer.Screen name="profile" options={{ title: 'User Profile' }} />
-      {/* Reachable only via push from Profile — never listed in the drawer. */}
       <Drawer.Screen name="account-details" options={{ title: 'Account Details' }} />
       <Drawer.Screen name="logout" options={{ headerShown: false, title: 'Logout' }} />
     </Drawer>

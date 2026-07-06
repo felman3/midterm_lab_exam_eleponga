@@ -6,8 +6,6 @@ import { Pressable, StyleSheet, View } from 'react-native';
 
 import { useAppTheme } from '@/contexts/theme-context';
 
-// Center tab styled as a bright blue floating circle that breaks
-// upward out of the normal tab boundary.
 function ScanFabButton({ onPress }: BottomTabBarButtonProps) {
   return (
     <Pressable onPress={onPress} style={styles.fabWrap}>
@@ -63,7 +61,6 @@ export default function TabsLayout() {
           tabBarIcon: ({ color }) => <Ionicons name="settings-outline" size={22} color={color} />,
         }}
       />
-      {/* Details screen lives in the tab stack but is hidden from the tab bar. */}
       <Tabs.Screen
         name="details"
         options={{

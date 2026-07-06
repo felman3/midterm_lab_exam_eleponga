@@ -1,5 +1,3 @@
-// Student metadata shown on the Profile and Account Details screens.
-// Update these values with your own information before submission.
 export const STUDENT = {
   fullName: 'Felman Eleponga',
   course: 'BSIT BA',
